@@ -1,3 +1,10 @@
 export interface tamperProtectionPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  /**
+   * Verify package signatures
+   *
+   * @since 1.0.0
+   */
+  verifySignatures(options: {
+    playStoreMd5: string;
+  }): Promise<{ isSigned: boolean }>;
 }

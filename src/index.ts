@@ -4,9 +4,7 @@ import type { tamperProtectionPlugin } from './definitions';
 
 const tamperProtection = registerPlugin<tamperProtectionPlugin>(
   'tamperProtection',
-  {
-    web: () => import('./web').then(m => new m.tamperProtectionWeb()),
-  },
+  {},
 );
 
 export * from './definitions';

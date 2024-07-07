@@ -13,24 +13,28 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`verifySignatures(...)`](#verifysignatures)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### verifySignatures(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+verifySignatures(options: { playStoreMd5: string; }) => Promise<{ isSigned: boolean; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+Verify package signatures
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+| Param         | Type                                   |
+| ------------- | -------------------------------------- |
+| **`options`** | <code>{ playStoreMd5: string; }</code> |
+
+**Returns:** <code>Promise&lt;{ isSigned: boolean; }&gt;</code>
+
+**Since:** 1.0.0
 
 --------------------
 
